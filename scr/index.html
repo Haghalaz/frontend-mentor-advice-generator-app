@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neonGreen: "#52FFA8",
+              lightCyan: "#CEE3E8",
+              darkGrayish: "#202632",
+              grayishBlue: "#313A49",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="grid bg-darkGrayish place-items-center h-screen w-screen">
+    <div class="relative bg-grayishBlue flex flex-col gap-8 text-center w-4/6 rounded-lg p-14 md:w-2/6">
+      <p id="id" class="text-neonGreen tracking-[.25rem]">Loading...</p>
+      <h1 id="advice" class="text-lightCyan text-4xl">Loading...</h1>
+
+      <img class="my-6 hidden md:inline" src="./images/pattern-divider-desktop.svg" alt="Divider between advice and button" />
+      <img class="my-6 relative md:hidden" src="./images/pattern-divider-mobile.svg" alt="Divider between advice and button" />
+
+      <button
+        id="getAdvice"
+        class="bg-neonGreen p-6 rounded-full absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 hover:drop-shadow-[0px_0px_16px_#52FFA8]"
+      >
+        <img src="./images/icon-dice.svg" alt="Dice Button" />
+      </button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
